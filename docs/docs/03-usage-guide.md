@@ -43,6 +43,13 @@ Your selected sort type is saved between sessions.
 
 :::
 
+## Custom Sorting Rules
+
+To put selected items first or last, group them together, or keep matching stacks in their current slots, use custom sorting rules.
+Rules work alongside your selected sort type and can be managed in the client config menu or with `/invsort priority` commands on a supporting server.
+
+See [Custom Sorting Rules](/custom-sorting-rules) for the match syntax, examples, and command reference.
+
 ## Sort Button
 
 If you are using the client mod and the sort button is enabled, a small icon will appear in supported inventories.
