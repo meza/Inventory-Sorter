@@ -237,6 +237,36 @@ This ensures consistent ordering within grouped or categorized sections.
 
 ---
 
+### `sortPriorityRules`
+
+**GUI label:** *Sort Priority Rules*<br/>
+**Config file key:** `sortPriorityRules`<br/>
+**Default:** `[]` (no custom rules)
+
+An ordered list of rules that put matching items first or last, group them in the default position, or leave matching stacks in their current slots.
+This is a player preference, not a global server rule.
+
+Each entry contains a `match` expression and a `position`.
+In the JSON file, use `"FIRST"`, `"DEFAULT"`, `"LAST"`, or `"IGNORE"` for the position.
+For example, this excerpt puts diamonds first and leaves stacks whose names begin with Meza's followed by a space in their current slots:
+
+```json
+{
+  "sortPriorityRules": [
+    { "match": "minecraft:diamond", "position": "FIRST" },
+    { "match": "name:\"Meza's *\"", "position": "IGNORE" }
+  ]
+}
+```
+
+Add the `sortPriorityRules` key to your existing configuration, keeping its other settings.
+Double quotes and backslashes inside JSON strings need escaping, as shown in the name expression above.
+Follow [Editing the Config File Manually](#editing-the-config-file-manually) to apply file edits.
+
+See [Custom Sorting Rules](/custom-sorting-rules) for expression syntax, rule precedence, validation, and `/invsort priority` commands.
+
+---
+
 ### `enableDoubleClickSort`
 **GUI label:** *Double click slot to sort inventory*  
 **Config file key:** `enableDoubleClickSort`  
